@@ -1,0 +1,10 @@
+**/.DS_Store
+
+terraform/begin/.terraform
+terraform/begin/.terraform.lock.hcl
+
+terraform/syntax/.terraform
+terraform/syntax/.terraform.lock.hcl
+terraform/syntax/terraform.tfstate.d
+terraform/syntax/terraform.tfstate
+terraform/syntax/terraform.tfstate.backup
