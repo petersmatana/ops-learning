@@ -1,10 +1,9 @@
-# login
+# Commands
+
+## login
 `az login`
 
-# show user info
-`az account show` - show current user session info
-
-# CLI for terraform
+## CLI for terraform
 |command|note|
 |--|--|
 |`terraform init`|download necessary plugins|
@@ -13,32 +12,30 @@
 |`terraform destroy`|delete stuff|
 |`-auto-approve`|auto approve stuff|
 
-# resource group
-`az group delete --name <group_name>` delete group
-
-`az group list`
-
-# networking
+## networking
 `az network nic delete --name vit-net --resource-group my_example_resource`
 
-# seznam vsech linux images pro vytvoreni virtualky
+## seznam vsech linux images pro vytvoreni virtualky
 `az vm image list --output table`
 
-# TODO
+## TODO
 `terraform refresh`
 
-# run with vara
+## run with vara
 `terraform plan -var "key=value" -var "key2=value2"`
 
-# TF registry
+## TF registry
 https://registry.terraform.io
 
-# apply with auto approve
+## apply with auto approve
 `terraform apply -auto-approve`
+
+## run tf with some selected var file
+`terraform plan -var-file ./env/dev.tfvars`
 
 ----
 
-### Anatomy of a Resource Block
+# Anatomy of a Resource Block
 A Terraform resource declaration consists of three primary components:
 
 | Component | Description | Example |
@@ -119,7 +116,7 @@ increment_number = 42
 
 These are the three basic types Terraform supports:
 
-- **`string`** — Text values, declared with double quotes (e.g., `"dev"`, `"Mark's blog"`)
+- **`string`** — Text values, declared with double quotes (e.g., `"dev"`)
 - **`number`** — Numeric values (e.g., `4` for an instance count)
 - **`bool`** — Boolean values for toggling things on/off (e.g., `enabled = false`)
 
@@ -202,17 +199,56 @@ workspaces are optional
 - each.key, each.value
 
 ----
+----
 
 # Terraform module registry - TODO
 
+----
 ----
 
 # Terraform console - TODO
 
 ----
+----
 
-# What to study in Azure - TODO
+# Resource Group
 
-- resource groups
-- subscriptions
-- Microsoft Entra ID
+A resource group is a container that holds related resources for an Azure solution. It can include all resources for a solution or only those you want to manage as a group. Resources sharing the same lifecycle are generally placed together so they can be deployed, updated, and deleted as a unit.
+
+The portal uses the resource group scope to provide several views: a Metrics blade (CPU, resource info), a Deployments blade (ARM/Bicep deployment history), a Policy blade (enforced policies), and a Diagnostics settings blade (errors and warnings).
+
+The resource group stores metadata about its resources, and specifying a location for the group means specifying where that metadata is stored. Resources inside a group can still reside in different regions.
+
+### commands
+`az group list`
+
+`az group delete --name <group_name>` delete group
+
+----
+----
+
+# Subscription
+
+*Just section in Azure with info about subscription, pricing, Subscription ID, etc...*
+
+### commands
+`az account show` - show current user session info
+
+----
+----
+
+# Microsoft Entra ID
+
+Microsoft Entra is a family of identity and network access products that lets organizations implement a Zero Trust security strategy and create a trust fabric that verifies identities, validates access conditions, checks permissions, encrypts connection channels, and monitors for compromise.
+
+----
+----
+
+# Azure Storage Accout Type
+
+A storage account contains all Azure Storage data objects — blobs, files, queues, and tables — and provides a unique namespace accessible from anywhere over HTTP or HTTPS. Data is durable, highly available, secure, and massively scalable.
+
+----
+----
+
+
