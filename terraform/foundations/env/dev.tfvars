@@ -1,2 +1,4 @@
 environemnt_name = "dev"
-storage_name = "storage"
+
+storage_account_name   = "storage"
+storage_container_name = "tfstate"

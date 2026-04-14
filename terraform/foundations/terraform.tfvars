@@ -1,4 +1,8 @@
-application_name = "petersapp" 
+application_name = "petersapp"
 primary_location = "West Europe"
 
-storage_name = "samplestorage"
+# I think I can delete this. In this file I should store
+# variables for whole project. In env folder I shoud have
+# vars for each specific env?
+# TODO
+# storage_name = "samplestorage"

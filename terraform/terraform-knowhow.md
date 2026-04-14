@@ -251,4 +251,23 @@ A storage account contains all Azure Storage data objects — blobs, files, queu
 ----
 ----
 
+# Azure Storage Container - TODO
 
+----
+----
+
+# Azure naming conventions - TODO
+
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
+
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations
+
+----
+----
+
+# Terraform Backend Block Configuration — TODO
+
+The backend block defines where Terraform stores its state data files. Terraform uses persisted state data to keep track of the resources it manages.
+
+----
+----
