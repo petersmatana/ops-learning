@@ -31,8 +31,6 @@ resource "azurerm_storage_container" "tfstate" {
 data "azurerm_client_config" "client_conf" {}
 
 resource "azurerm_key_vault" "key-vault" {
-  # tenant_id           = "2af3ada4-9585-40b7-8d4a-44c787f47f64"
-
   name                = "kv-${var.application_name}-${random_string.suffix.result}-${var.environemnt_name}"
   location            = azurerm_resource_group.main-rg.location
   resource_group_name = azurerm_resource_group.main-rg.name
